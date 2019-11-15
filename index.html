@@ -2,7 +2,13 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="thermostat.css">
+    <script src="src/Thermostat.js"></script>
+    <script src="src/interface.js"></script>
   </head>
   <body>
     <h1>
@@ -20,18 +26,16 @@
 
             <div class="display">
                 <p> Current temperature:</p>
-                <br>
+                <span id="tempValue"></span><sup>&deg;</sup>
                 <p> Power Saving is:</p>
                 <br>
                 <p> The current energy usage is:</p>
                 <br>
             </div>
+
+        <p id="api"> </p>
         </p>
     </section>
-
-
-
-    <script src="js/thermostat.js"></script>
   </body>
 </html>
 

@@ -15,25 +15,26 @@ Thermostat.prototype.showTemperature = function() {
 }
 
 Thermostat.prototype.increase = function() {
-    this._temperature += 1;
-    if (this._powerSavingOn && this._temperature > this._MINTEMPpsON) {
+    if (this._powerSavingOn && this._temperature === this._MINTEMPpsON) {
         return 'cannot increase temperature beyond 25 degrees'; }
-    else if (this._powerSavingOn === false && this._temperature > this._MINTEMPpsOFF) {
+    else if (this._powerSavingOn === false && this._temperature === this._MINTEMPpsOFF) {
         return 'cannot increase temperature beyond 32 degrees'; }
-    else { return this._temperature }
+    else { this._temperature++ }
 }
 
 Thermostat.prototype.decrease = function() {
-    this._temperature -= 1;
-    if (this._temperature < this._MINTEMP) {
+    if (this._temperature === this._MINTEMP) {
         return 'cannot lower temperature below minimum temperature';
     } else {
-        return this._temperature;
+        this._temperature--;
     }
 }
 
 Thermostat.prototype.powerSavingSwitch = function(){
     this._powerSavingOn = !(this._powerSavingOn);
+}
+
+Thermostat.prototype.isPowerSavingOn = function(){
     return this._powerSavingOn;
 }
 
@@ -46,7 +47,7 @@ Thermostat.prototype.showUsage = function(){
     if (this._temperature < this.MEDIUM_USAGE_LIMIT) {
         return 'low-usage';
       }
-      if (this._temperature >= this.MEDIUM_USAGE_LIMIT && this._temperature <= this._MINTEMPpsON) {
+      if (this._temperature >= this.MEDIUM_USAGE_LIMIT && this._temperature < this._MINTEMPpsON) {
         return 'medium-usage';
       }
       return 'high-usage';

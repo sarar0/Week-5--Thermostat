@@ -19,8 +19,8 @@ describe('Thermostat', function(){
     })
 
     it('can turn power saving on/off', function (){
-        expect(myThermo.powerSavingSwitch()).toEqual(false);
-        expect(myThermo.powerSavingSwitch()).toEqual(true);
+        myThermo.powerSavingSwitch()
+        expect(myThermo.isPowerSavingOn()).toBe(false);
     })
 
 
