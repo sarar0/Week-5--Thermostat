@@ -26,7 +26,8 @@ describe('Thermostat', function(){
 
     it('can reset the temperature to 20', function(){
         myThermo._temperature = 25;
-        expect(myThermo.reset()).toEqual(20);
+        myThermo.reset();
+        expect(myThermo.showTemperature()).toEqual(20);
     })
 
     describe('when temperature is below 18', function(){

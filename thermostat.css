@@ -20,4 +20,27 @@ button {
 
 .display {
     color: black;
+    font-size: 1.2rem;
 }
+
+.low-usage {
+    color: green;
+  }
+  
+.high-usage {
+    color: red;
+}
+
+.psmOn {
+    background-color: green;
+}
+
+.psmOff {
+    background-color: red;
+}
+
+#tempValue {
+    font-size: 3em;
+}
+
+
