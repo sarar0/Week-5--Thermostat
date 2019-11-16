@@ -15,29 +15,39 @@
       Thermostat
     </h1>
     <section>
-        <p>
             <div class="buttons">
-                <button id="temperature-up">+</button>
-                <button id="temperature-down">-</button>
+                <button id="temperature-up">&#x2191;</button>
+                <button id="temperature-down">&#x2193;</button>
                 <br>
                 <button id="temperature-reset">Reset</button>
                 <button id="power-saving-switch">Power Saving ON/OFF</button>
             </div>
 
-            <div class="display">
-                <p> Current temperature:</p>
+            <div>
+                <p> Temperature:</p>
                 <span id="tempValue"></span>
-                <br>
-                <br>
-                <span> Power Saving is: </span><span id="power-saving"></span>
-                <br>
-                <br>
+
+
+                <p> Power Saving is: </p>
+                <span id="power-saving"></span>
+
+
                 <p> The current energy usage is:</p>
+                <div class="display">
                 <span id="energy-usage"> </span>
-                <br>
-                <br>
+                </div>
+                <section>
+                <p>Enter your city: </p>  
+                  <form id="select-city">
+                      <input id="current-city" type="text" placeholder="Enter a city"></input>
+                      <input type="submit"></input>
+                  </form>
+                <p>Current temperature in: <span id="display-city"> </span></p>
+                <span id="current-temperature-city"></span>
+              </section>  
+              <br>
+
             </div>
-        </p>
     </section>
   </body>
 </html>

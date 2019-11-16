@@ -1,30 +1,38 @@
+h1 {
+    color: #129680da
+}
+
 body {
-    background-color: rgb(155, 190, 221);
+    background-color:whitesmoke;
     font-family: "Montserrat", "Open Sans", Helvetica, Arial, sans-serif;
     text-align: center;
     position: relative;
+    font-size: 1.2rem;
 }
 
 button {
+    color: whitesmoke;
     display: inline-block;
-    border-radius: 4px;  
-    background-color: #758ed3;  
+    background-color: #129680da; 
     text-align: center;  
-    padding: 20px;  
+    padding: 10px;  
     width: 300px;  
     transition: all 0.5s;  
     cursor: pointer;  
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 10px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
 }
 
 .display {
-    color: black;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .low-usage {
-    color: green;
+    color: #129680da;
   }
   
 .high-usage {
@@ -32,15 +40,45 @@ button {
 }
 
 .psmOn {
-    background-color: green;
+    color:#129680da;
+    font-size: 2em;
 }
 
 .psmOff {
-    background-color: red;
+    color: red;
+    font-size: 2em;
 }
 
 #tempValue {
-    font-size: 3em;
+    font-size: 2em;
 }
 
+#current-temperature-city {
+    font-size: 2em;
+}
 
+#display-city{
+    color:#129680da;
+    font-size: 1.2rem;
+}
+
+input[type="text"] {
+    width: 5em;
+    height: 3em;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    background-color: #129680da; 
+    text-align: center;  
+    padding: 10px;  
+    transition: all 0.5s;  
+    cursor: pointer;  
+    font-size: 1rem;
+    margin: 10px;
+    border: none;
+    color: whitesmoke;
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
